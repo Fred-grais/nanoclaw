@@ -28,29 +28,69 @@ royal_jester, banquet_steward, explorer, falconer
 
 Si l'utilisateur ne précise pas de style, demande-lui d'en choisir un parmi la liste ci-dessus (ou propose-en quelques-uns adaptés).
 
-## Workflow
+## Source d'images : Google Sheets
 
-### Étape 0 — Rechercher et confirmer une image (si l'utilisateur n'en fournit pas)
+Les images sources sont stockées dans la spreadsheet Google Sheets :
+- **Spreadsheet ID** : `1rwxhsDcJb8jn2kR-3DsdEyR6jg7IogcVNwnSRS-V63g`
+- **Nom** : `nanoclaw-pawtraits-source-imgs`
+- **Format** : une URL par ligne, colonne A
 
-Si l'utilisateur ne fournit pas d'image, utilise le skill **agent-browser** pour en trouver une sur internet.
+### Étape 0 — Récupérer une image depuis la spreadsheet
 
-1. Effectuer une recherche Google Images (ou DuckDuckGo Images) avec des termes comme :
-   - `"[race/espèce de l'animal] single dog portrait photo high quality"`
-   - Ajouter des mots-clés comme "alone", "single", "one dog", "solo" pour éviter les images avec plusieurs animaux
-   - Privilégier des images claires, bien cadrées sur le visage/corps de l'animal, fond neutre de préférence
-2. **IMPORTANT — Critères de sélection de l'image :**
-   - ✅ Un seul animal visible sur l'image
-   - ✅ Animal bien cadré, visible clairement
-   - ✅ Bonne qualité/résolution
-   - ❌ Rejeter toute image avec plusieurs animaux
-   - ❌ Rejeter les images floues ou mal cadrées
-3. Sélectionner la meilleure image trouvée correspondant à ces critères
-3. **Présenter l'image à l'utilisateur** en affichant son URL et un aperçu si possible :
-   > 🐾 J'ai trouvé cette image : [URL]
-   > Est-ce que je peux l'utiliser pour créer ton pawtrait ? (oui / non, cherche-en une autre)
-4. **Attendre la confirmation de l'utilisateur** avant de continuer.
-   - Si l'utilisateur refuse → chercher une autre image et re-proposer
-   - Si l'utilisateur confirme → passer à l'étape 1 avec l'URL validée
+Si l'utilisateur ne fournit pas d'image directement :
+
+```bash
+# Lire les URLs disponibles dans la spreadsheet
+IMAGES=$(gws sheets +read --spreadsheet "1rwxhsDcJb8jn2kR-3DsdEyR6jg7IogcVNwnSRS-V63g" --range "A1:A100" 2>/dev/null | python3 -c "
+import sys, json
+data = json.load(sys.stdin)
+values = data.get('values', [])
+urls = [row[0] for row in values if row and row[0].strip()]
+print('\n'.join(urls))
+")
+
+if [ -z "$IMAGES" ]; then
+  # Aucune image disponible → prévenir Frédéric
+  echo "EMPTY"
+else
+  # Prendre la première URL disponible
+  IMAGE_URL=$(echo "$IMAGES" | head -1)
+  echo "Image URL: $IMAGE_URL"
+fi
+```
+
+**Si la spreadsheet est vide** → envoyer ce message à Frédéric via send_message :
+> "🐾 La spreadsheet d'images source est vide ! Ajoute des URLs d'images dans `nanoclaw-pawtraits-source-imgs` sur Google Sheets et je génèrerai les pawtraits automatiquement."
+
+**Si une image est disponible** → l'envoyer à Frédéric pour validation :
+> 🐾 Image trouvée dans la spreadsheet : [URL]
+> Est-ce que je peux l'utiliser pour créer le pawtrait ? (oui / non)
+
+Attendre la confirmation avant de continuer. Une fois validée, **supprimer l'URL de la spreadsheet** pour éviter de la réutiliser :
+
+```bash
+# Supprimer la première ligne (décaler les autres vers le haut)
+# Lire toutes les URLs restantes
+REMAINING=$(gws sheets +read --spreadsheet "1rwxhsDcJb8jn2kR-3DsdEyR6jg7IogcVNwnSRS-V63g" --range "A1:A100" 2>/dev/null | python3 -c "
+import sys, json
+data = json.load(sys.stdin)
+values = data.get('values', [])
+urls = [row[0] for row in values[1:] if row and row[0].strip()]
+print(json.dumps([[u] for u in urls]))
+")
+
+# Effacer la colonne A
+gws sheets spreadsheets values clear --spreadsheet "1rwxhsDcJb8jn2kR-3DsdEyR6jg7IogcVNwnSRS-V63g" --range "A1:A100" 2>/dev/null
+
+# Réécrire les URLs restantes (sans la première)
+if [ "$REMAINING" != "[]" ]; then
+  gws sheets spreadsheets values update \
+    --spreadsheet "1rwxhsDcJb8jn2kR-3DsdEyR6jg7IogcVNwnSRS-V63g" \
+    --range "A1" \
+    --json "{\"values\": ${REMAINING}, \"majorDimension\": \"ROWS\"}" 2>/dev/null
+fi
+echo "✅ URL consommée de la spreadsheet"
+```
 
 > ⚠️ Ne jamais passer à l'étape suivante sans confirmation explicite de l'utilisateur.
 

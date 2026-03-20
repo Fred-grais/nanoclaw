@@ -212,6 +212,18 @@ function buildVolumeMounts(
     readonly: false,
   });
 
+  // Google Workspace CLI credentials (read-write so gws can write its token cache)
+  // Requires GOOGLE_WORKSPACE_CLI_KEYRING_BACKEND=file to work without OS keyring.
+  // Run `gws auth setup` on the host first to authenticate.
+  const gwsConfigDir = path.join(process.env.HOME || '/root', '.config', 'gws');
+  if (fs.existsSync(gwsConfigDir)) {
+    mounts.push({
+      hostPath: gwsConfigDir,
+      containerPath: '/home/node/.config/gws',
+      readonly: false,
+    });
+  }
+
   // Additional mounts validated against external allowlist (tamper-proof from containers)
   if (group.containerConfig?.additionalMounts) {
     const validatedMounts = validateAdditionalMounts(
@@ -233,6 +245,9 @@ function buildContainerArgs(
 
   // Pass host timezone so container's local time matches the user's
   args.push('-e', `TZ=${TIMEZONE}`);
+
+  // Use file-based keyring so gws can decrypt credentials without OS keyring
+  args.push('-e', 'GOOGLE_WORKSPACE_CLI_KEYRING_BACKEND=file');
 
   // Route API traffic through the credential proxy (containers never see real secrets)
   args.push(

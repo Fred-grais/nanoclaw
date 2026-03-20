@@ -1,0 +1,22 @@
+{
+  "business_id": "1406726254560249",
+  "catalog_id": "4066442766941751",
+  "fb_user_id": "122189136272787312",
+  "products": {
+    "49eur": {
+      "id": "26025482050427541",
+      "name": "Pawtrait of Nobility for your pet (20 × 25 cm)",
+      "price": "€49.00"
+    },
+    "99eur": {
+      "id": "34431383649840476",
+      "name": "Pawtrait of Nobility for your pet (30 × 40 cm)",
+      "price": "€99.00"
+    },
+    "129eur": {
+      "id": "34431905866455059",
+      "name": "Pawtrait of Nobility for your pet (60 × 90 cm)",
+      "price": "€129.00"
+    }
+  }
+}

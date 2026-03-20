@@ -315,6 +315,35 @@ cat data/ipc/{groupFolder}/current_tasks.json
 - `current_tasks.json` - Host writes: read-only snapshot of scheduled tasks
 - `available_groups.json` - Host writes: read-only list of WhatsApp groups (main only)
 
+## Firewall Blocking Container → Proxy (Linux / UFW)
+
+On Linux servers with UFW (default policy DROP), Docker containers cannot reach the credential proxy on port 3001. Symptoms:
+- Container spawns and shows `[msg #1] type=system/init` but never makes any API calls
+- No `Proxy → Anthropic` log entries appear
+- "Request timed out" result, or container just hangs silently
+- Direct test from container shows `ETIMEDOUT`
+
+**Fix:**
+```bash
+ufw allow from 172.17.0.0/16 to any port 3001 comment "NanoClaw credential proxy for Docker containers"
+```
+
+**Verify** by testing from inside a running container:
+```bash
+docker exec <container-name> node -e "
+const http = require('http');
+const body = JSON.stringify({model:'claude-haiku-4-5',max_tokens:10,messages:[{role:'user',content:'hi'}]});
+const req = http.request({
+  hostname:'host.docker.internal', port:3001,
+  path:'/v1/messages?beta=true', method:'POST',
+  headers:{'content-type':'application/json','content-length':Buffer.byteLength(body),'anthropic-version':'2023-06-01','authorization':'Bearer placeholder','anthropic-beta':'oauth-2025-04-20','x-app':'cli'}
+}, (res) => { let d=''; res.on('data',c=>d+=c); res.on('end',()=>console.log(res.statusCode, d.slice(0,100))); });
+req.on('error',e=>console.log('ERROR:',e.message));
+req.write(body); req.end();
+"
+```
+Expected: `200 {"model":"claude-haiku-4-5-20251001"...}`
+
 ## Quick Diagnostic Script
 
 Run this to check common issues:

@@ -42,7 +42,6 @@ export interface ContainerInput {
   isScheduledTask?: boolean;
   assistantName?: string;
   imageAttachments?: Array<{ relativePath: string; mediaType: string }>;
-
 }
 
 export interface ContainerOutput {
@@ -124,6 +123,10 @@ function buildVolumeMounts(
     '.claude',
   );
   fs.mkdirSync(groupSessionsDir, { recursive: true });
+  if (process.getuid?.() === 0) {
+    fs.chownSync(path.join(DATA_DIR, 'sessions', group.folder), 1000, 1000);
+    fs.chownSync(groupSessionsDir, 1000, 1000);
+  }
   const settingsFile = path.join(groupSessionsDir, 'settings.json');
   if (!fs.existsSync(settingsFile)) {
     fs.writeFileSync(
@@ -171,6 +174,14 @@ function buildVolumeMounts(
   fs.mkdirSync(path.join(groupIpcDir, 'messages'), { recursive: true });
   fs.mkdirSync(path.join(groupIpcDir, 'tasks'), { recursive: true });
   fs.mkdirSync(path.join(groupIpcDir, 'input'), { recursive: true });
+  // When running as root, chown IPC dirs to the container's node user (uid 1000)
+  // so the container agent can delete/write files in these directories.
+  if (process.getuid?.() === 0) {
+    fs.chownSync(groupIpcDir, 1000, 1000);
+    for (const sub of ['messages', 'tasks', 'input']) {
+      fs.chownSync(path.join(groupIpcDir, sub), 1000, 1000);
+    }
+  }
   mounts.push({
     hostPath: groupIpcDir,
     containerPath: '/workspace/ipc',
@@ -276,6 +287,9 @@ export async function runContainerAgent(
 
   const groupDir = resolveGroupFolderPath(group.folder);
   fs.mkdirSync(groupDir, { recursive: true });
+  if (process.getuid?.() === 0) {
+    fs.chownSync(groupDir, 1000, 1000);
+  }
 
   const mounts = buildVolumeMounts(group, input.isMain);
   const safeName = group.folder.replace(/[^a-zA-Z0-9-]/g, '-');

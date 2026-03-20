@@ -21,6 +21,13 @@ groups/global/*
 # Secrets
 *.keys.json
 .env
+container/skills/linkedin-manager/li_token.txt
+container/skills/linkedin-manager/li_client_secret.txt
+container/skills/instagram-manager/ig_token.txt
+container/skills/instagram-manager/iga_id.txt
+container/skills/instagram-manager/page_token.txt
+container/skills/instagram-manager/fb_token.txt
+container/skills/pawtrait-creator/replicate_token.txt
 
 # Temp files
 .tmp-*

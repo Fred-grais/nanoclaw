@@ -67,17 +67,40 @@ export function startCredentialProxy(
           delete headers['x-api-key'];
           headers['x-api-key'] = secrets.ANTHROPIC_API_KEY;
         } else {
-          // OAuth mode: replace placeholder Bearer token with the real one
-          // only when the container actually sends an Authorization header
-          // (exchange request + auth probes). Post-exchange requests use
-          // x-api-key only, so they pass through without token injection.
-          if (headers['authorization']) {
-            delete headers['authorization'];
-            if (oauthToken) {
-              headers['authorization'] = `Bearer ${oauthToken}`;
-            }
+          // OAuth mode: inject real token and required OAuth beta headers on
+          // every request so Claude Code's SDK can authenticate without a
+          // key-exchange step (which requires org:create_api_key scope).
+          delete headers['authorization'];
+          if (oauthToken) {
+            headers['authorization'] = `Bearer ${oauthToken}`;
           }
+          headers['anthropic-beta'] = [
+            ...(headers['anthropic-beta']
+              ? Array.isArray(headers['anthropic-beta'])
+                ? headers['anthropic-beta']
+                : [headers['anthropic-beta'] as string]
+              : []),
+            'oauth-2025-04-20',
+          ]
+            .filter((v, i, a) => a.indexOf(v) === i)
+            .join(',');
+          headers['x-app'] = headers['x-app'] || 'cli';
         }
+
+        const safeHeaders = { ...headers };
+        if (safeHeaders['authorization']) {
+          safeHeaders['authorization'] = safeHeaders['authorization']
+            .toString()
+            .replace(/Bearer .{10}.*/, 'Bearer [REDACTED]');
+        }
+        logger.info(
+          {
+            method: req.method,
+            url: `${upstreamUrl.origin}${req.url}`,
+            headers: safeHeaders,
+          },
+          'Proxy → Anthropic',
+        );
 
         const upstream = makeRequest(
           {
@@ -88,6 +111,10 @@ export function startCredentialProxy(
             headers,
           } as RequestOptions,
           (upRes) => {
+            logger.info(
+              { status: upRes.statusCode, url: req.url },
+              'Proxy ← Anthropic',
+            );
             res.writeHead(upRes.statusCode!, upRes.headers);
             upRes.pipe(res);
           },

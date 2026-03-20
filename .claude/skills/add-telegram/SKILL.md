@@ -175,6 +175,34 @@ Check:
 3. For non-main chats: message includes trigger pattern
 4. Service is running: `launchctl list | grep nanoclaw` (macOS) or `systemctl --user status nanoclaw` (Linux)
 
+### Container agent times out / "Request timed out" with no proxy logs
+
+On Linux servers with UFW (or any firewall with default DROP policy), the Docker container cannot reach the credential proxy on port 3001. The connection hangs silently.
+
+**Fix** — allow the Docker bridge network to reach port 3001:
+
+```bash
+ufw allow from 172.17.0.0/16 to any port 3001 comment "NanoClaw credential proxy for Docker containers"
+```
+
+Verify it works by testing from inside a running container:
+
+```bash
+docker exec <container-name> node -e "
+const http = require('http');
+const body = JSON.stringify({model:'claude-haiku-4-5',max_tokens:10,messages:[{role:'user',content:'hi'}]});
+const req = http.request({
+  hostname:'host.docker.internal', port:3001,
+  path:'/v1/messages?beta=true', method:'POST',
+  headers:{'content-type':'application/json','content-length':Buffer.byteLength(body),'anthropic-version':'2023-06-01','authorization':'Bearer placeholder','anthropic-beta':'oauth-2025-04-20','x-app':'cli'}
+}, (res) => { let d=''; res.on('data',c=>d+=c); res.on('end',()=>console.log(res.statusCode, d.slice(0,100))); });
+req.on('error',e=>console.log('ERROR:',e.message));
+req.write(body); req.end();
+"
+```
+
+Expected: `200 {"model":"claude-haiku-4-5-20251001"...}`
+
 ### Bot only responds to @mentions in groups
 
 Group Privacy is enabled (default). Fix:

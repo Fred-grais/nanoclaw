@@ -1,0 +1,1255 @@
+(node:3098237) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+  Telegram bot: @fred_assistant_pragma_bot
+  Send /chatid to the bot to get a chat's registration ID
+
+[12:01:31.680] [32mINFO[39m (3098237): [36mDatabase initialized[39m
+[12:01:31.683] [32mINFO[39m (3098237): [36mState loaded[39m
+    [35mgroupCount[39m: 4
+[12:01:31.699] [32mINFO[39m (3098237): [36mCredential proxy started[39m
+    [35mport[39m: 3001
+    [35mhost[39m: "172.17.0.1"
+    [35mauthMode[39m: "oauth"
+[12:01:31.781] [32mINFO[39m (3098237): [36mTelegram bot connected[39m
+    [35musername[39m: "fred_assistant_pragma_bot"
+    [35mid[39m: 8670900478
+[12:01:32.077] [32mINFO[39m (3098237): [36mconnected to WA[39m
+    [35mbrowser[39m: [
+      "Mac OS",
+      "Chrome",
+      "14.4.1"
+    ]
+    [35mhelloMsg[39m: {
+      "clientHello": {
+        "ephemeral": "dDGeMrxU0122nKZ69l8dPRN4E5bOAMtfTDWqIDhciHM="
+      }
+    }
+[12:01:32.256] [32mINFO[39m (3098237): [36mlogging in...[39m
+    [35mnode[39m: {
+      "username": "33679700599",
+      "passive": true,
+      "userAgent": {
+        "platform": "WEB",
+        "appVersion": {
+          "primary": 2,
+          "secondary": 3000,
+          "tertiary": 1035409526
+        },
+        "mcc": "000",
+        "mnc": "000",
+        "osVersion": "0.1",
+        "device": "Desktop",
+        "osBuildNumber": "0.1",
+        "releaseChannel": "RELEASE",
+        "localeLanguageIso6391": "en",
+        "localeCountryIso31661Alpha2": "US"
+      },
+      "webInfo": {
+        "webSubPlatform": "WEB_BROWSER"
+      },
+      "connectType": "WIFI_UNKNOWN",
+      "connectReason": "USER_ACTIVATED",
+      "device": 13,
+      "pull": true,
+      "lidDbMigrated": false
+    }
+[12:01:32.684] [32mINFO[39m (3098237): [36m701 pre-keys found on server[39m
+[12:01:32.684] [32mINFO[39m (3098237): [36mCurrent prekey ID: 817, exists in storage: true[39m
+[12:01:32.684] [32mINFO[39m (3098237): [36mPreKey validation passed - Server: 701, Current prekey 817 exists[39m
+[12:01:32.862] [32mINFO[39m (3098237): [36mhandled 0 offline messages/notifications[39m
+[12:01:32.863] [32mINFO[39m (3098237): [36mConnection is now AwaitingInitialSync, buffering events[39m
+[12:01:32.864] [32mINFO[39m (3098237): [36mHistory sync is enabled, awaiting notification with a 20s timeout.[39m
+[12:01:33.084] [32mINFO[39m (3098237): [36mopened connection to WA[39m
+[12:01:33.092] [32mINFO[39m (3098237): [36mConnected to WhatsApp[39m
+[12:01:33.095] [32mINFO[39m (3098237): [36mScheduler loop started[39m
+[12:01:33.103] [32mINFO[39m (3098237): [36mIPC watcher started (per-group namespaces)[39m
+[12:01:33.108] [32mINFO[39m (3098237): [36mRecovery: found unprocessed messages[39m
+    [35mgroup[39m: "Rebecca"
+    [35mpendingCount[39m: 5
+[12:01:33.111] [32mINFO[39m (3098237): [36mNanoClaw running (trigger: @Claude)[39m
+[12:01:33.123] [32mINFO[39m (3098237): [36mOwn LID session created successfully[39m
+    [35mmyPN[39m: "33679700599:13@s.whatsapp.net"
+    [35mmyLID[39m: "224519583191149:13@lid"
+[12:01:52.865] [33mWARN[39m (3098237): [36mTimeout in AwaitingInitialSync, forcing state to Online and flushing buffer[39m
+(node:3099061) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[12:02:35.811] [32mINFO[39m (3099061): [36mDatabase initialized[39m
+[12:02:35.813] [32mINFO[39m (3099061): [36mState loaded[39m
+    [35mgroupCount[39m: 4
+[12:02:35.825] [31mERROR[39m (3099061): [36mFailed to start NanoClaw[39m
+    err: {
+      "type": "Error",
+      "message": "listen EADDRINUSE: address already in use 172.17.0.1:3001",
+      "stack":
+          Error: listen EADDRINUSE: address already in use 172.17.0.1:3001
+              at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+              at listenInCluster (node:net:1997:12)
+              at node:net:2206:7
+              at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+      "code": "EADDRINUSE",
+      "errno": -98,
+      "syscall": "listen",
+      "address": "172.17.0.1",
+      "port": 3001
+    }
+(node:3099441) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+  Telegram bot: @fred_assistant_pragma_bot
+  Send /chatid to the bot to get a chat's registration ID
+
+[12:02:56.090] [32mINFO[39m (3099441): [36mDatabase initialized[39m
+[12:02:56.092] [32mINFO[39m (3099441): [36mState loaded[39m
+    [35mgroupCount[39m: 4
+[12:02:56.111] [32mINFO[39m (3099441): [36mCredential proxy started[39m
+    [35mport[39m: 3001
+    [35mhost[39m: "0.0.0.0"
+    [35mauthMode[39m: "oauth"
+[12:02:56.196] [32mINFO[39m (3099441): [36mTelegram bot connected[39m
+    [35musername[39m: "fred_assistant_pragma_bot"
+    [35mid[39m: 8670900478
+[12:02:56.350] [32mINFO[39m (3099441): [36mconnected to WA[39m
+    [35mbrowser[39m: [
+      "Mac OS",
+      "Chrome",
+      "14.4.1"
+    ]
+    [35mhelloMsg[39m: {
+      "clientHello": {
+        "ephemeral": "DaK6DVm+GICI6NIR4nVHWl+AFnpNqnmJfihOipSKkFM="
+      }
+    }
+[12:02:56.393] [32mINFO[39m (3099441): [36mlogging in...[39m
+    [35mnode[39m: {
+      "username": "33679700599",
+      "passive": true,
+      "userAgent": {
+        "platform": "WEB",
+        "appVersion": {
+          "primary": 2,
+          "secondary": 3000,
+          "tertiary": 1035409526
+        },
+        "mcc": "000",
+        "mnc": "000",
+        "osVersion": "0.1",
+        "device": "Desktop",
+        "osBuildNumber": "0.1",
+        "releaseChannel": "RELEASE",
+        "localeLanguageIso6391": "en",
+        "localeCountryIso31661Alpha2": "US"
+      },
+      "webInfo": {
+        "webSubPlatform": "WEB_BROWSER"
+      },
+      "connectType": "WIFI_UNKNOWN",
+      "connectReason": "USER_ACTIVATED",
+      "device": 13,
+      "pull": true,
+      "lidDbMigrated": false
+    }
+[12:02:56.858] [32mINFO[39m (3099441): [36m701 pre-keys found on server[39m
+[12:02:56.858] [32mINFO[39m (3099441): [36mCurrent prekey ID: 817, exists in storage: true[39m
+[12:02:56.858] [32mINFO[39m (3099441): [36mPreKey validation passed - Server: 701, Current prekey 817 exists[39m
+[12:02:57.060] [32mINFO[39m (3099441): [36mhandled 0 offline messages/notifications[39m
+[12:02:57.061] [32mINFO[39m (3099441): [36mConnection is now AwaitingInitialSync, buffering events[39m
+[12:02:57.061] [32mINFO[39m (3099441): [36mHistory sync is enabled, awaiting notification with a 20s timeout.[39m
+[12:02:57.072] [32mINFO[39m (3099441): [36mopened connection to WA[39m
+[12:02:57.076] [32mINFO[39m (3099441): [36mConnected to WhatsApp[39m
+[12:02:57.077] [32mINFO[39m (3099441): [36mScheduler loop started[39m
+[12:02:57.079] [32mINFO[39m (3099441): [36mIPC watcher started (per-group namespaces)[39m
+[12:02:57.080] [32mINFO[39m (3099441): [36mRecovery: found unprocessed messages[39m
+    [35mgroup[39m: "Rebecca"
+    [35mpendingCount[39m: 5
+[12:02:57.082] [32mINFO[39m (3099441): [36mNanoClaw running (trigger: @Claude)[39m
+[12:02:57.090] [32mINFO[39m (3099441): [36mOwn LID session created successfully[39m
+    [35mmyPN[39m: "33679700599:13@s.whatsapp.net"
+    [35mmyLID[39m: "224519583191149:13@lid"
+[12:03:17.063] [33mWARN[39m (3099441): [36mTimeout in AwaitingInitialSync, forcing state to Online and flushing buffer[39m
+[12:05:15.209] [32mINFO[39m (3099441): [36mNew messages[39m
+    [35mcount[39m: 1
+[12:05:15.234] [32mINFO[39m (3099441): [36mProcessing messages[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mmessageCount[39m: 1
+[12:05:15.246] [32mINFO[39m (3099441): [36mSpawning container agent[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1773831915245"
+    [35mmountCount[39m: 6
+    [35misMain[39m: true
+[12:05:22.717] [32mINFO[39m (3099441): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 685208,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:05:29.285] [32mINFO[39m (3099441): [36mAgent output: Oui, je suis là ! 😊 Qu'est-ce que je peux faire pour toi ?[39m
+    [35mgroup[39m: "Fred WhatsApp"
+Closing session: SessionEntry {
+  _chains: {
+    Bbx8OQsyIdGnOYIRYhI6LCRFu9xRoy2aeSAVgZw0DoQ6: { chainKey: [Object], chainType: 2, messageKeys: {} },
+    'BWrewpYnsu+sQnKEGvKcSxftPtj2cgCsxUMyvbOE9E4S': { chainKey: [Object], chainType: 1, messageKeys: {} }
+  },
+  registrationId: 1284224602,
+  currentRatchet: {
+    ephemeralKeyPair: {
+      pubKey: <Buffer 05 6a de c2 96 27 b2 ef ac 42 72 84 1a f2 9c 4b 17 ed 3e d8 f6 72 00 ac c5 43 32 bd b3 84 f4 4e 12>,
+      privKey: <Buffer 50 c2 3c 55 a8 01 13 fa a5 30 a0 2a 8b d9 48 bb 97 39 96 b6 8a 25 5f a6 87 32 d2 40 32 8f ac 72>
+    },
+    lastRemoteEphemeralKey: <Buffer 05 bc 7c 39 0b 32 21 d1 a7 39 82 11 62 12 3a 2c 24 45 bb dc 51 a3 2d 9a 79 20 15 81 9c 34 0e 84 3a>,
+    previousCounter: 0,
+    rootKey: <Buffer 65 7d b7 59 aa ea f7 a2 e8 c3 15 24 b4 29 63 4e 97 fb 2d d2 2b b8 c1 73 54 63 cb 4b 74 7c c8 61>
+  },
+  indexInfo: {
+    baseKey: <Buffer 05 45 cf d9 83 29 19 d0 2f 9b f9 28 f4 6d 1a cc 8f 28 a0 08 5b 68 8b 70 b1 38 c9 d7 6a 58 fd 10 50>,
+    baseKeyType: 1,
+    closed: -1,
+    used: 1773831914786,
+    created: 1773826624795,
+    remoteIdentityKey: <Buffer 05 1e d7 74 f5 c5 2d 06 91 ca 5b d9 24 b5 4d 9d 63 7e ea 4c f6 54 85 b9 1d c1 c2 c2 ff 95 63 18 01>
+  }
+}
+Removing old closed session: SessionEntry {
+  _chains: {
+    Bd5lY5ZUPQbpLBhSb5XAt1IrU9gpQCRBKRE5A3Cc1lIT: { chainKey: [Object], chainType: 1, messageKeys: {} }
+  },
+  registrationId: 1284224602,
+  currentRatchet: {
+    ephemeralKeyPair: {
+      pubKey: <Buffer 05 de 65 63 96 54 3d 06 e9 2c 18 52 6f 95 c0 b7 52 2b 53 d8 29 40 24 41 29 11 39 03 70 9c d6 52 13>,
+      privKey: <Buffer a8 3b db a7 e3 1c d6 47 8d 6d 44 b5 fb b0 7d 5d eb 53 57 ef 83 f4 0a 3e 0b 38 1d 65 7a 3c 5a 55>
+    },
+    lastRemoteEphemeralKey: <Buffer 05 ba 63 c7 ad 72 ce 8b a1 f4 4a d5 e9 2d 40 47 eb e7 62 eb bf de 26 7e 8b 01 e5 ce ad 62 b5 c1 59>,
+    previousCounter: 0,
+    rootKey: <Buffer f1 aa 8b 82 e6 cc 81 02 fd af 01 68 10 2f bd a9 30 0d 8f 00 46 da b3 b9 b6 df 50 bf 38 b0 82 b1>
+  },
+  indexInfo: {
+    baseKey: <Buffer 05 b9 42 70 d0 49 54 57 74 bc 13 b3 04 e1 7b fc ac 13 e1 98 57 dd a5 c4 5b 6c e9 7a f8 f1 f4 20 4a>,
+    baseKeyType: 1,
+    closed: 1773691441406,
+    used: 1773690828622,
+    created: 1773690828622,
+    remoteIdentityKey: <Buffer 05 1e d7 74 f5 c5 2d 06 91 ca 5b d9 24 b5 4d 9d 63 7e ea 4c f6 54 85 b9 1d c1 c2 c2 ff 95 63 18 01>
+  },
+  pendingPreKey: {
+    signedKeyId: 3354749,
+    baseKey: <Buffer 05 b9 42 70 d0 49 54 57 74 bc 13 b3 04 e1 7b fc ac 13 e1 98 57 dd a5 c4 5b 6c e9 7a f8 f1 f4 20 4a>,
+    preKeyId: 13989
+  }
+}
+[12:05:30.180] [32mINFO[39m (3099441): [36mMessage sent[39m
+    [35mjid[39m: "33679700599@s.whatsapp.net"
+    [35mlength[39m: 67
+[12:05:30.503] [31mERROR[39m (3099441): [36mContainer exited with error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcode[39m: 137
+    [35mduration[39m: 15263
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n[agent-runner] [msg #2] type=assistant\n[agent-runner] [msg #3] type=rate_limit_event\n[agent-runner] [msg #4] type=result\n[agent-runner] Result #1: subtype=success text=Oui, je suis là ! 😊 Qu'est-ce que je peux faire pour toi ?\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.11.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1\nnpm notice To update run: npm install -g npm@11.11.1\nnpm notice\n---NANOCLAW_OUTPUT_START---\n{\"status\":\"success\",\"result\":\"Oui, je suis là ! 😊 Qu'est-ce que je peux faire pour toi ?\",\"newSessionId\":\"2174f187-0453-4eaf-bbf7-f9b3a49406cd\"}\n---NANOCLAW_OUTPUT_END---\n"
+    [35mlogFile[39m: "/home/nanoclaw/groups/whatsapp_main/logs/container-2026-03-18T11-05-30-503Z.log"
+[12:05:30.504] [31mERROR[39m (3099441): [36mContainer agent error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    error: "Container exited with code 137: =assistant\n[agent-runner] [msg #3] type=rate_limit_event\n[agent-runner] [msg #4] type=result\n[agent-runner] Result #1: subtype=success text=Oui, je suis là ! 😊 Qu'est-ce que je peux faire pour toi ?\n"
+[12:05:30.505] [33mWARN[39m (3099441): [36mAgent error after output was sent, skipping cursor rollback to prevent duplicates[39m
+    [35mgroup[39m: "Fred WhatsApp"
+[12:05:53.270] [32mINFO[39m (3099441): [36mNew messages[39m
+    [35mcount[39m: 1
+[12:05:53.292] [32mINFO[39m (3099441): [36mProcessing messages[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mmessageCount[39m: 1
+[12:05:53.298] [32mINFO[39m (3099441): [36mSpawning container agent[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1773831953297"
+    [35mmountCount[39m: 6
+    [35misMain[39m: true
+[12:06:00.502] [32mINFO[39m (3099441): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 685608,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:06:08.116] [32mINFO[39m (3099441): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 864601,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:06:09.000] [31mERROR[39m (3099441): [36mContainer exited with error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcode[39m: 137
+    [35mduration[39m: 15704
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n[agent-runner] [msg #2] type=assistant\n[agent-runner] [msg #3] type=assistant\n[agent-runner] [msg #4] type=rate_limit_event\n[agent-runner] [msg #5] type=user\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.11.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1\nnpm notice To update run: npm install -g npm@11.11.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/nanoclaw/groups/whatsapp_main/logs/container-2026-03-18T11-06-09-000Z.log"
+[12:06:09.001] [31mERROR[39m (3099441): [36mContainer agent error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    error: "Container exited with code 137: zed: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n[agent-runner] [msg #2] type=assistant\n[agent-runner] [msg #3] type=assistant\n[agent-runner] [msg #4] type=rate_limit_event\n[agent-runner] [msg #5] type=user\n"
+[12:06:09.016] [33mWARN[39m (3099441): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Fred WhatsApp"
+[12:06:09.016] [32mINFO[39m (3099441): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "33679700599@s.whatsapp.net"
+    [35mretryCount[39m: 1
+    [35mdelayMs[39m: 5000
+[12:06:14.027] [32mINFO[39m (3099441): [36mProcessing messages[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mmessageCount[39m: 1
+[12:06:14.033] [32mINFO[39m (3099441): [36mSpawning container agent[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1773831974033"
+    [35mmountCount[39m: 6
+    [35misMain[39m: true
+[12:06:21.946] [32mINFO[39m (3099441): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 776011,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:06:27.153] [31mERROR[39m (3099441): [36mContainer exited with error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcode[39m: 137
+    [35mduration[39m: 13121
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.11.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1\nnpm notice To update run: npm install -g npm@11.11.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/nanoclaw/groups/whatsapp_main/logs/container-2026-03-18T11-06-27-152Z.log"
+[12:06:27.153] [31mERROR[39m (3099441): [36mContainer agent error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    error: "Container exited with code 137: ] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+[12:06:27.163] [33mWARN[39m (3099441): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Fred WhatsApp"
+[12:06:27.163] [32mINFO[39m (3099441): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "33679700599@s.whatsapp.net"
+    [35mretryCount[39m: 2
+    [35mdelayMs[39m: 10000
+[12:06:37.183] [32mINFO[39m (3099441): [36mProcessing messages[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mmessageCount[39m: 1
+[12:06:37.190] [32mINFO[39m (3099441): [36mSpawning container agent[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1773831997189"
+    [35mmountCount[39m: 6
+    [35misMain[39m: true
+[12:06:44.398] [32mINFO[39m (3099441): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 776371,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:06:51.196] [31mERROR[39m (3099441): [36mContainer exited with error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcode[39m: 137
+    [35mduration[39m: 14007
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.11.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1\nnpm notice To update run: npm install -g npm@11.11.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/nanoclaw/groups/whatsapp_main/logs/container-2026-03-18T11-06-51-195Z.log"
+[12:06:51.196] [31mERROR[39m (3099441): [36mContainer agent error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    error: "Container exited with code 137: ] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+[12:06:51.209] [33mWARN[39m (3099441): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Fred WhatsApp"
+[12:06:51.209] [32mINFO[39m (3099441): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "33679700599@s.whatsapp.net"
+    [35mretryCount[39m: 3
+    [35mdelayMs[39m: 20000
+[12:07:11.224] [32mINFO[39m (3099441): [36mProcessing messages[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mmessageCount[39m: 1
+[12:07:11.228] [32mINFO[39m (3099441): [36mSpawning container agent[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1773832031228"
+    [35mmountCount[39m: 6
+    [35misMain[39m: true
+[12:07:18.431] [32mINFO[39m (3099441): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 776731,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:07:22.226] [31mERROR[39m (3099441): [36mContainer exited with error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcode[39m: 137
+    [35mduration[39m: 10998
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.11.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1\nnpm notice To update run: npm install -g npm@11.11.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/nanoclaw/groups/whatsapp_main/logs/container-2026-03-18T11-07-22-225Z.log"
+[12:07:22.226] [31mERROR[39m (3099441): [36mContainer agent error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    error: "Container exited with code 137: ] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+[12:07:22.235] [33mWARN[39m (3099441): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Fred WhatsApp"
+[12:07:22.236] [32mINFO[39m (3099441): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "33679700599@s.whatsapp.net"
+    [35mretryCount[39m: 4
+    [35mdelayMs[39m: 40000
+[12:08:02.253] [32mINFO[39m (3099441): [36mProcessing messages[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mmessageCount[39m: 1
+[12:08:02.258] [32mINFO[39m (3099441): [36mSpawning container agent[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1773832082258"
+    [35mmountCount[39m: 6
+    [35misMain[39m: true
+[12:08:09.625] [32mINFO[39m (3099441): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 777091,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:08:19.345] [31mERROR[39m (3099441): [36mContainer exited with error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcode[39m: 137
+    [35mduration[39m: 17087
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.11.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1\nnpm notice To update run: npm install -g npm@11.11.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/nanoclaw/groups/whatsapp_main/logs/container-2026-03-18T11-08-19-344Z.log"
+[12:08:19.345] [31mERROR[39m (3099441): [36mContainer agent error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    error: "Container exited with code 137: ] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+[12:08:19.356] [33mWARN[39m (3099441): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Fred WhatsApp"
+[12:08:19.356] [32mINFO[39m (3099441): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "33679700599@s.whatsapp.net"
+    [35mretryCount[39m: 5
+    [35mdelayMs[39m: 80000
+[12:09:39.374] [32mINFO[39m (3099441): [36mProcessing messages[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mmessageCount[39m: 1
+[12:09:39.382] [32mINFO[39m (3099441): [36mSpawning container agent[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1773832179382"
+    [35mmountCount[39m: 6
+    [35misMain[39m: true
+[12:09:47.116] [32mINFO[39m (3099441): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 777451,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:09:52.501] [31mERROR[39m (3099441): [36mContainer exited with error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcode[39m: 137
+    [35mduration[39m: 13121
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.11.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1\nnpm notice To update run: npm install -g npm@11.11.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/nanoclaw/groups/whatsapp_main/logs/container-2026-03-18T11-09-52-501Z.log"
+[12:09:52.501] [31mERROR[39m (3099441): [36mContainer agent error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    error: "Container exited with code 137: ] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+[12:09:52.510] [33mWARN[39m (3099441): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Fred WhatsApp"
+[12:09:52.510] [31mERROR[39m (3099441): [36mMax retries exceeded, dropping messages (will retry on next incoming message)[39m
+    [35mgroupJid[39m: "33679700599@s.whatsapp.net"
+    [35mretryCount[39m: 6
+[12:14:11.710] [32mINFO[39m (3099441): [36mNew messages[39m
+    [35mcount[39m: 1
+[12:14:11.732] [32mINFO[39m (3099441): [36mProcessing messages[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mmessageCount[39m: 2
+[12:14:11.737] [32mINFO[39m (3099441): [36mSpawning container agent[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1773832451737"
+    [35mmountCount[39m: 6
+    [35misMain[39m: true
+[12:14:19.145] [32mINFO[39m (3099441): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 861128,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:14:26.588] [31mERROR[39m (3099441): [36mContainer exited with error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcode[39m: 137
+    [35mduration[39m: 14852
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] Loaded image: /workspace/group/attachments/img-1773831952995-mlxy.jpg\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.11.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1\nnpm notice To update run: npm install -g npm@11.11.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/nanoclaw/groups/whatsapp_main/logs/container-2026-03-18T11-14-26-588Z.log"
+[12:14:26.588] [31mERROR[39m (3099441): [36mContainer agent error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    error: "Container exited with code 137: \n[agent-runner] Loaded image: /workspace/group/attachments/img-1773831952995-mlxy.jpg\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+[12:14:26.603] [33mWARN[39m (3099441): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Fred WhatsApp"
+[12:14:26.603] [32mINFO[39m (3099441): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "33679700599@s.whatsapp.net"
+    [35mretryCount[39m: 1
+    [35mdelayMs[39m: 5000
+[12:14:31.615] [32mINFO[39m (3099441): [36mProcessing messages[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mmessageCount[39m: 2
+[12:14:31.619] [32mINFO[39m (3099441): [36mSpawning container agent[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1773832471619"
+    [35mmountCount[39m: 6
+    [35misMain[39m: true
+[12:14:38.880] [32mINFO[39m (3099441): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 950383,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:14:44.922] [31mERROR[39m (3099441): [36mContainer exited with error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcode[39m: 137
+    [35mduration[39m: 13303
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] Loaded image: /workspace/group/attachments/img-1773831952995-mlxy.jpg\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.11.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1\nnpm notice To update run: npm install -g npm@11.11.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/nanoclaw/groups/whatsapp_main/logs/container-2026-03-18T11-14-44-921Z.log"
+[12:14:44.922] [31mERROR[39m (3099441): [36mContainer agent error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    error: "Container exited with code 137: \n[agent-runner] Loaded image: /workspace/group/attachments/img-1773831952995-mlxy.jpg\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+[12:14:44.933] [33mWARN[39m (3099441): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Fred WhatsApp"
+[12:14:44.934] [32mINFO[39m (3099441): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "33679700599@s.whatsapp.net"
+    [35mretryCount[39m: 2
+    [35mdelayMs[39m: 10000
+[12:14:54.946] [32mINFO[39m (3099441): [36mProcessing messages[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mmessageCount[39m: 2
+[12:14:54.951] [32mINFO[39m (3099441): [36mSpawning container agent[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1773832494951"
+    [35mmountCount[39m: 6
+    [35misMain[39m: true
+[12:15:01.603] [32mINFO[39m (3099441): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 1039638,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:15:09.104] [31mERROR[39m (3099441): [36mContainer exited with error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcode[39m: 137
+    [35mduration[39m: 14153
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] Loaded image: /workspace/group/attachments/img-1773831952995-mlxy.jpg\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.11.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1\nnpm notice To update run: npm install -g npm@11.11.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/nanoclaw/groups/whatsapp_main/logs/container-2026-03-18T11-15-09-103Z.log"
+[12:15:09.104] [31mERROR[39m (3099441): [36mContainer agent error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    error: "Container exited with code 137: \n[agent-runner] Loaded image: /workspace/group/attachments/img-1773831952995-mlxy.jpg\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+[12:15:09.116] [33mWARN[39m (3099441): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Fred WhatsApp"
+[12:15:09.116] [32mINFO[39m (3099441): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "33679700599@s.whatsapp.net"
+    [35mretryCount[39m: 3
+    [35mdelayMs[39m: 20000
+[12:15:29.130] [32mINFO[39m (3099441): [36mProcessing messages[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mmessageCount[39m: 2
+[12:15:29.135] [32mINFO[39m (3099441): [36mSpawning container agent[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1773832529135"
+    [35mmountCount[39m: 6
+    [35misMain[39m: true
+[12:15:36.736] [32mINFO[39m (3099441): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 1128893,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:15:40.135] [31mERROR[39m (3099441): [36mContainer exited with error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcode[39m: 137
+    [35mduration[39m: 11001
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] Loaded image: /workspace/group/attachments/img-1773831952995-mlxy.jpg\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.11.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1\nnpm notice To update run: npm install -g npm@11.11.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/nanoclaw/groups/whatsapp_main/logs/container-2026-03-18T11-15-40-135Z.log"
+[12:15:40.136] [31mERROR[39m (3099441): [36mContainer agent error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    error: "Container exited with code 137: \n[agent-runner] Loaded image: /workspace/group/attachments/img-1773831952995-mlxy.jpg\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+[12:15:40.144] [33mWARN[39m (3099441): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Fred WhatsApp"
+[12:15:40.145] [32mINFO[39m (3099441): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "33679700599@s.whatsapp.net"
+    [35mretryCount[39m: 4
+    [35mdelayMs[39m: 40000
+[12:16:20.157] [32mINFO[39m (3099441): [36mProcessing messages[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mmessageCount[39m: 2
+[12:16:20.164] [32mINFO[39m (3099441): [36mSpawning container agent[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1773832580163"
+    [35mmountCount[39m: 6
+    [35misMain[39m: true
+[12:16:27.456] [32mINFO[39m (3099441): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 1218148,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:16:31.679] [31mERROR[39m (3099441): [36mContainer exited with error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcode[39m: 137
+    [35mduration[39m: 11516
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] Loaded image: /workspace/group/attachments/img-1773831952995-mlxy.jpg\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.11.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1\nnpm notice To update run: npm install -g npm@11.11.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/nanoclaw/groups/whatsapp_main/logs/container-2026-03-18T11-16-31-678Z.log"
+[12:16:31.679] [31mERROR[39m (3099441): [36mContainer agent error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    error: "Container exited with code 137: \n[agent-runner] Loaded image: /workspace/group/attachments/img-1773831952995-mlxy.jpg\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+[12:16:31.690] [33mWARN[39m (3099441): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Fred WhatsApp"
+[12:16:31.690] [32mINFO[39m (3099441): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "33679700599@s.whatsapp.net"
+    [35mretryCount[39m: 5
+    [35mdelayMs[39m: 80000
+[12:17:51.709] [32mINFO[39m (3099441): [36mProcessing messages[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mmessageCount[39m: 2
+[12:17:51.717] [32mINFO[39m (3099441): [36mSpawning container agent[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1773832671717"
+    [35mmountCount[39m: 6
+    [35misMain[39m: true
+[12:17:59.530] [32mINFO[39m (3099441): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 1307403,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:18:04.017] [31mERROR[39m (3099441): [36mContainer exited with error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    [35mcode[39m: 137
+    [35mduration[39m: 12300
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: 2174f187-0453-4eaf-bbf7-f9b3a49406cd, resumeAt: latest)...\n[agent-runner] Loaded image: /workspace/group/attachments/img-1773831952995-mlxy.jpg\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.11.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1\nnpm notice To update run: npm install -g npm@11.11.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/nanoclaw/groups/whatsapp_main/logs/container-2026-03-18T11-18-04-016Z.log"
+[12:18:04.017] [31mERROR[39m (3099441): [36mContainer agent error[39m
+    [35mgroup[39m: "Fred WhatsApp"
+    error: "Container exited with code 137: \n[agent-runner] Loaded image: /workspace/group/attachments/img-1773831952995-mlxy.jpg\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: 2174f187-0453-4eaf-bbf7-f9b3a49406cd\n"
+[12:18:04.029] [33mWARN[39m (3099441): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Fred WhatsApp"
+[12:18:04.029] [31mERROR[39m (3099441): [36mMax retries exceeded, dropping messages (will retry on next incoming message)[39m
+    [35mgroupJid[39m: "33679700599@s.whatsapp.net"
+    [35mretryCount[39m: 6
+(node:3115677) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+  Telegram bot: @fred_assistant_pragma_bot
+  Send /chatid to the bot to get a chat's registration ID
+
+[12:23:24.480] [32mINFO[39m (3115677): [36mStopped orphaned containers[39m
+    [35mcount[39m: 1
+    [35mnames[39m: [
+      "nanoclaw-whatsapp-main-1773832987873"
+    ]
+[12:23:24.489] [32mINFO[39m (3115677): [36mDatabase initialized[39m
+[12:23:24.491] [32mINFO[39m (3115677): [36mState loaded[39m
+    [35mgroupCount[39m: 4
+[12:23:24.514] [32mINFO[39m (3115677): [36mCredential proxy started[39m
+    [35mport[39m: 3001
+    [35mhost[39m: "172.17.0.1"
+    [35mauthMode[39m: "oauth"
+[12:23:24.606] [32mINFO[39m (3115677): [36mTelegram bot connected[39m
+    [35musername[39m: "fred_assistant_pragma_bot"
+    [35mid[39m: 8670900478
+[12:23:24.855] [32mINFO[39m (3115677): [36mconnected to WA[39m
+    [35mbrowser[39m: [
+      "Mac OS",
+      "Chrome",
+      "14.4.1"
+    ]
+    [35mhelloMsg[39m: {
+      "clientHello": {
+        "ephemeral": "MLEykfaB2Ok9onGdNDtS7YdrKLTiP5NCvoMO9b5VbC8="
+      }
+    }
+[12:23:24.985] [32mINFO[39m (3115677): [36mlogging in...[39m
+    [35mnode[39m: {
+      "username": "33679700599",
+      "passive": true,
+      "userAgent": {
+        "platform": "WEB",
+        "appVersion": {
+          "primary": 2,
+          "secondary": 3000,
+          "tertiary": 1035409526
+        },
+        "mcc": "000",
+        "mnc": "000",
+        "osVersion": "0.1",
+        "device": "Desktop",
+        "osBuildNumber": "0.1",
+        "releaseChannel": "RELEASE",
+        "localeLanguageIso6391": "en",
+        "localeCountryIso31661Alpha2": "US"
+      },
+      "webInfo": {
+        "webSubPlatform": "WEB_BROWSER"
+      },
+      "connectType": "WIFI_UNKNOWN",
+      "connectReason": "USER_ACTIVATED",
+      "device": 13,
+      "pull": true,
+      "lidDbMigrated": false
+    }
+[12:23:25.321] [32mINFO[39m (3115677): [36m698 pre-keys found on server[39m
+[12:23:25.321] [32mINFO[39m (3115677): [36mCurrent prekey ID: 817, exists in storage: true[39m
+[12:23:25.321] [32mINFO[39m (3115677): [36mPreKey validation passed - Server: 698, Current prekey 817 exists[39m
+[12:23:25.436] [32mINFO[39m (3115677): [36mhandled 0 offline messages/notifications[39m
+[12:23:25.437] [32mINFO[39m (3115677): [36mConnection is now AwaitingInitialSync, buffering events[39m
+[12:23:25.437] [32mINFO[39m (3115677): [36mHistory sync is enabled, awaiting notification with a 20s timeout.[39m
+[12:23:25.600] [32mINFO[39m (3115677): [36mopened connection to WA[39m
+[12:23:25.605] [32mINFO[39m (3115677): [36mConnected to WhatsApp[39m
+[12:23:25.607] [32mINFO[39m (3115677): [36mScheduler loop started[39m
+[12:23:25.609] [32mINFO[39m (3115677): [36mIPC watcher started (per-group namespaces)[39m
+[12:23:25.611] [32mINFO[39m (3115677): [36mRecovery: found unprocessed messages[39m
+    [35mgroup[39m: "Rebecca"
+    [35mpendingCount[39m: 5
+[12:23:25.613] [32mINFO[39m (3115677): [36mNanoClaw running (trigger: @Claude)[39m
+[12:23:25.622] [32mINFO[39m (3115677): [36mOwn LID session created successfully[39m
+    [35mmyPN[39m: "33679700599:13@s.whatsapp.net"
+    [35mmyLID[39m: "224519583191149:13@lid"
+[12:23:45.439] [33mWARN[39m (3115677): [36mTimeout in AwaitingInitialSync, forcing state to Online and flushing buffer[39m
+[12:25:51.205] [32mINFO[39m (3115677): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 75201,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:25:53.509] [32mINFO[39m (3115677): [36mProxy ← Anthropic[39m
+    [35mstatus[39m: 200
+    [35murl[39m: "/v1/messages?beta=true"
+[12:25:54.864] [32mINFO[39m (3115677): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 164834,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:25:56.573] [32mINFO[39m (3115677): [36mProxy ← Anthropic[39m
+    [35mstatus[39m: 200
+    [35murl[39m: "/v1/messages?beta=true"
+[12:29:37.767] [32mINFO[39m (3115677): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 1485819,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:29:43.775] [32mINFO[39m (3115677): [36mProxy ← Anthropic[39m
+    [35mstatus[39m: 200
+    [35murl[39m: "/v1/messages?beta=true"
+[12:33:28.564] [32mINFO[39m (3115677): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 163270,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:33:30.550] [32mINFO[39m (3115677): [36mProxy ← Anthropic[39m
+    [35mstatus[39m: 200
+    [35murl[39m: "/v1/messages?beta=true"
+[12:33:56.213] [32mINFO[39m (3115677): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 75204,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:33:57.786] [32mINFO[39m (3115677): [36mProxy ← Anthropic[39m
+    [35mstatus[39m: 200
+    [35murl[39m: "/v1/messages?beta=true"
+[12:37:29.142] [32mINFO[39m (3115677): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 163282,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:37:30.815] [32mINFO[39m (3115677): [36mProxy ← Anthropic[39m
+    [35mstatus[39m: 200
+    [35murl[39m: "/v1/messages?beta=true"
+[12:38:41.982] [32mINFO[39m (3115677): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 75183,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:38:43.179] [32mINFO[39m (3115677): [36mProxy ← Anthropic[39m
+    [35mstatus[39m: 200
+    [35murl[39m: "/v1/messages?beta=true"
+[12:43:25.660] [32mINFO[39m (3115677): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 163184,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:43:32.285] [32mINFO[39m (3115677): [36mProxy ← Anthropic[39m
+    [35mstatus[39m: 200
+    [35murl[39m: "/v1/messages?beta=true"
+[12:45:04.590] [32mINFO[39m (3115677): [36mProxy → Anthropic[39m
+    [35mmethod[39m: "POST"
+    [35murl[39m: "https://api.anthropic.com/v1/messages?beta=true"
+    [35mheaders[39m: {
+      "host": "api.anthropic.com",
+      "accept": "application/json",
+      "x-stainless-retry-count": "0",
+      "x-stainless-timeout": "600",
+      "x-stainless-lang": "js",
+      "x-stainless-package-version": "0.74.0",
+      "x-stainless-os": "Linux",
+      "x-stainless-arch": "x64",
+      "x-stainless-runtime": "node",
+      "x-stainless-runtime-version": "v22.22.1",
+      "anthropic-dangerous-direct-browser-access": "true",
+      "anthropic-version": "2023-06-01",
+      "x-app": "cli",
+      "user-agent": "claude-cli/2.1.76 (external, sdk-ts)",
+      "content-type": "application/json",
+      "anthropic-beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,prompt-caching-scope-2026-01-05,effort-2025-11-24,oauth-2025-04-20",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "accept-encoding": "gzip, deflate",
+      "content-length": 163184,
+      "authorization": "Bearer [REDACTED]"
+    }
+[12:45:07.283] [32mINFO[39m (3115677): [36mProxy ← Anthropic[39m
+    [35mstatus[39m: 200
+    [35murl[39m: "/v1/messages?beta=true"
+[12:48:38.228] [32mINFO[39m (3115677): [36mShutdown signal received[39m
+    [35msignal[39m: "SIGTERM"
+[12:48:38.230] [32mINFO[39m (3115677): [36mGroupQueue shutting down (containers detached, not killed)[39m
+    [35mactiveCount[39m: 0
+    [35mdetachedContainers[39m: []
+[12:48:38.241] [32mINFO[39m (3115677): [36mTelegram bot stopped[39m
+[12:48:38.242] [32mINFO[39m (3115677): [36mconnection closed[39m
+[12:48:38.244] [32mINFO[39m (3115677): [36mConnection closed[39m
+    [35mshouldReconnect[39m: true
+    [35mqueuedMessages[39m: 0
+[12:48:38.244] [32mINFO[39m (3115677): [36mReconnecting...[39m
+    [35mattempt[39m: 1
+    [35mdelayMs[39m: 5000

@@ -17,14 +17,32 @@ Utilise ce skill quand l'utilisateur demande :
 
 ## Informations du compte
 
-- **IG User ID** (ancien, graph.instagram.com) : `26252993180996956`
-- **Instagram Business Account ID** (nouveau, graph.facebook.com) : `17841439615510629`
+- **Instagram Business Account ID** : `17841439615510629`
 - **Username** : `@pawtraitsofnobility`
 - **Facebook Page ID** : `1085865291266057`
 - **Facebook Business ID** : `1406726254560249`
-- **Page Access Token** : `/home/node/.claude/skills/instagram-manager/page_token.txt`
-- **Instagram Token** (legacy, stories) : `/home/node/.claude/skills/instagram-manager/ig_token.txt`
 - **CTA URL** : `https://pawtraits-of-nobility.vercel.app/`
+
+## 🔐 Authentification — System User Token
+
+L'authentification utilise un **System User Token** (user système "nanoclaw" dans Meta Business Suite), qui n'expire pas avec les sessions utilisateur.
+
+- **System User Token** : `/home/node/.claude/skills/instagram-manager/fb_token.txt`
+- **Page Access Token** (dérivé du System User Token) : `/home/node/.claude/skills/instagram-manager/page_token.txt`
+
+### Régénérer le Page Token depuis le System User Token
+
+```bash
+FB_TOKEN=$(cat /home/node/.claude/skills/instagram-manager/fb_token.txt)
+PAGE_ID="1085865291266057"
+
+RESP=$(curl -s "https://graph.facebook.com/v25.0/${PAGE_ID}?fields=access_token&access_token=${FB_TOKEN}")
+NEW_PAGE_TOKEN=$(echo "$RESP" | python3 -c "import sys,json; print(json.load(sys.stdin)['access_token'])")
+echo -n "$NEW_PAGE_TOKEN" > /home/node/.claude/skills/instagram-manager/page_token.txt
+echo "✅ Page Token renouvelé"
+```
+
+> ⚠️ Si le System User Token est lui-même expiré (erreur 463), demander à Frédéric un nouveau token depuis Meta Business Suite → Paramètres → Utilisateurs système → nanoclaw → Générer un token.
 
 ## 🛍️ Product Tagging (OBLIGATOIRE sur chaque post)
 
@@ -42,9 +60,9 @@ La config complète est dans `/home/node/.claude/skills/instagram-manager/shoppi
 ### Publier un nouveau post (avec product tag)
 
 1. Récupérer l'image (URL partagée par l'utilisateur)
-2. Télécharger l'image et l'uploader sur **litterbox.catbox.moe** (obligatoire pour graph.facebook.com — uguu.se est bloqué par les serveurs Facebook)
+2. Télécharger l'image et l'uploader sur **litterbox.catbox.moe** (obligatoire — uguu.se est bloqué par les serveurs Facebook)
 3. Rédiger une caption fun avec CTA vers https://pawtraits-of-nobility.vercel.app/
-4. Créer le media container **via graph.facebook.com** avec product_tags
+4. Créer le media container via `graph.facebook.com` avec product_tags
 5. Attendre ~12 secondes puis publier
 
 ```bash
@@ -61,7 +79,7 @@ IMAGE_URL=$(curl -s -F "reqtype=fileupload" -F "time=72h" -F "fileToUpload=@/tmp
 echo "Image URL: $IMAGE_URL"
 
 # Créer container avec product tag
-CONTAINER=$(curl -s -X POST "https://graph.facebook.com/v20.0/${IGA_ID}/media" \
+CONTAINER=$(curl -s -X POST "https://graph.facebook.com/v25.0/${IGA_ID}/media" \
   --data-urlencode "image_url=${IMAGE_URL}" \
   --data-urlencode "caption=${CAPTION}" \
   --data-urlencode "product_tags=[{\"product_id\":\"${PRODUCT_ID}\",\"x\":0.5,\"y\":0.8}]" \
@@ -72,14 +90,12 @@ CREATION_ID=$(echo "$CONTAINER" | python3 -c "import sys,json; print(json.load(s
 sleep 12
 
 # Publier
-curl -s -X POST "https://graph.facebook.com/v20.0/${IGA_ID}/media_publish" \
+curl -s -X POST "https://graph.facebook.com/v25.0/${IGA_ID}/media_publish" \
   --data-urlencode "creation_id=${CREATION_ID}" \
   --data-urlencode "access_token=${PAGE_TOKEN}"
 ```
 
 ### Publier une Story
-
-Le Page Token fonctionne aussi pour les Stories via graph.facebook.com :
 
 ```bash
 SKILL_DIR="/home/node/.claude/skills/instagram-manager"
@@ -89,25 +105,23 @@ IGA_ID="17841439615510629"
 # Uploader sur litterbox
 IMAGE_URL=$(curl -s -F "reqtype=fileupload" -F "time=72h" -F "fileToUpload=@/tmp/ig_upload_image.jpg" "https://litterbox.catbox.moe/resources/internals/api.php")
 
-CONTAINER=$(curl -s -X POST "https://graph.facebook.com/v20.0/${IGA_ID}/media" \
+CONTAINER=$(curl -s -X POST "https://graph.facebook.com/v25.0/${IGA_ID}/media" \
   --data-urlencode "image_url=${IMAGE_URL}" \
   --data-urlencode "media_type=STORIES" \
   --data-urlencode "access_token=${PAGE_TOKEN}")
 STORY_ID=$(echo "$CONTAINER" | python3 -c "import sys,json; print(json.load(sys.stdin)['id'])")
 sleep 12
-curl -s -X POST "https://graph.facebook.com/v20.0/${IGA_ID}/media_publish" \
+curl -s -X POST "https://graph.facebook.com/v25.0/${IGA_ID}/media_publish" \
   --data-urlencode "creation_id=${STORY_ID}" \
   --data-urlencode "access_token=${PAGE_TOKEN}"
 ```
 
-## ⚠️ Important : utiliser exclusivement graph.facebook.com + Page Token
+## ⚠️ Règles importantes
 
-| Usage | Endpoint | Token |
-|-------|----------|-------|
-| Posts avec product tag | `graph.facebook.com` + IGA_ID `17841439615510629` | `page_token.txt` |
-| Stories | `graph.facebook.com` + IGA_ID `17841439615510629` | `page_token.txt` |
-
-L'ancien token Instagram (`ig_token.txt`) et `graph.instagram.com` ne sont plus nécessaires.
+- Utiliser **exclusivement** `graph.facebook.com` + Page Token pour tous les appels API
+- **Jamais** `graph.instagram.com` (ancien endpoint, ne supporte pas le product tagging)
+- Image **obligatoirement** hébergée sur litterbox.catbox.moe avant d'envoyer à l'API
+- Product tag **obligatoire** sur chaque post (jamais de post sans tag produit)
 
 ## Style des captions
 
@@ -118,17 +132,13 @@ L'ancien token Instagram (`ig_token.txt`) et `graph.instagram.com` ne sont plus 
 - CTA fixe : `👉 Crée le portrait noble de ton animal ici : https://pawtraits-of-nobility.vercel.app/`
 - Hashtags : 8-12 hashtags pertinents (race du chien + art + portrait) — les hashtags peuvent rester en anglais pour la portée
 
-## Token expiré ?
+## Token expiré ? (erreur OAuthException code 190/463)
 
-**Page Token (graph.facebook.com)** — Si erreur `OAuthException code 190` :
-1. Aller sur https://developers.facebook.com/tools/explorer
-2. Sélectionner l'app, cocher toutes les permissions shopping + pages
-3. Générer le token utilisateur
-4. Récupérer le Page Access Token : `GET /1085865291266057?fields=access_token`
-5. Sauvegarder : `echo "TOKEN" > /home/node/.claude/skills/instagram-manager/page_token.txt`
-
-**Instagram Token (graph.instagram.com)** — Si erreur `OAuthException code 190` :
-Demander à Frédéric de régénérer un token sur https://developers.facebook.com/tools/explorer
-```bash
-echo "NOUVEAU_TOKEN" > /home/node/.claude/skills/instagram-manager/ig_token.txt
-```
+1. Essayer d'abord de régénérer le Page Token depuis le System User Token (voir section Authentification ci-dessus)
+2. Si le System User Token lui-même est expiré → demander à Frédéric un nouveau token depuis :
+   **Meta Business Suite** → Paramètres → Utilisateurs système → nanoclaw → Générer un token
+3. Sauvegarder le nouveau System User Token :
+   ```bash
+   echo -n "NOUVEAU_TOKEN" > /home/node/.claude/skills/instagram-manager/fb_token.txt
+   ```
+4. Puis régénérer le Page Token (voir étape ci-dessus)

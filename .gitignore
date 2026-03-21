@@ -27,6 +27,7 @@ container/skills/instagram-manager/ig_token.txt
 container/skills/instagram-manager/iga_id.txt
 container/skills/instagram-manager/page_token.txt
 container/skills/instagram-manager/fb_token.txt
+container/skills/instagram-manager/fb_app_credentials.json
 container/skills/pawtrait-creator/replicate_token.txt
 
 # Temp files

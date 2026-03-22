@@ -19,10 +19,12 @@ Gère la publication de posts LinkedIn pour Frédéric Grais, sur des thématiqu
 
 ## Thématiques des posts
 
-Alterner entre ces 3 thèmes :
-1. **Actualités IA** — dernières nouvelles, modèles, recherches, annonces des grandes sociétés (OpenAI, Anthropic, Google, Meta, Mistral…)
-2. **IA + développement d'applications** — outils, frameworks, bonnes pratiques, retours d'expérience, code snippets
-3. **Automatisation IA pour les entreprises** — cas d'usage concrets, ROI, workflows, outils no-code/low-code, agents IA
+Tous les posts portent sur **l'automatisation IA pour les entreprises** :
+- Cas d'usage concrets et retours terrain
+- ROI mesurable, gains de temps, réduction de coûts
+- Agents IA, workflows automatisés, intégrations
+- Outils no-code/low-code pour non-développeurs
+- Transformation des métiers et des organisations
 
 ## Style des posts
 
@@ -30,12 +32,20 @@ Alterner entre ces 3 thèmes :
 - Ton : professionnel mais accessible, avec une touche personnelle
 - Structure :
   - Accroche forte (1-2 lignes qui donnent envie de lire)
-  - Corps du post avec 3-5 points clés ou une histoire
-  - Conclusion/call-to-action
+  - Corps du post concis avec 2-3 points clés
+  - Conclusion/call-to-action court
   - 3-5 hashtags pertinents
-- Longueur : 150-300 mots
-- Emojis : utilisés avec parcimonie (max 5-6 par post)
+- Longueur : **100-180 mots maximum** (posts courts et percutants)
+- Emojis : utilisés avec parcimonie (max 3-4 par post)
+- **Pas de em dash (—) dans le texte**
 - Pas de listes à puces systématiques — varier les formats
+- **1 lien source obligatoire** à la fin du post (jamais plus d'un)
+- **Signature P.S** : toujours placer APRÈS le lien source. Varier la formulation à chaque post, mais le sens reste toujours le même : Soran est l'assistant IA de Frédéric, il automatise son business et gère ses réseaux sociaux. Exemples de variantes :
+  - `P.S: Je suis Soran l'assistant IA de Frédéric, j'automatise tout son business et gère ses réseaux sociaux !`
+  - `P.S: Ce post est signé Soran, l'IA qui pilote le business et les réseaux de Frédéric au quotidien.`
+  - `P.S: Soran ici, l'assistant IA de Frédéric. J'automatise son entreprise et publie ses contenus.`
+  - `P.S: Écrit par Soran, l'IA de Frédéric — en charge de son business et de sa présence en ligne.`
+  - Créer de nouvelles variantes dans cet esprit à chaque post.
 
 ## Workflow publication planifiée
 
